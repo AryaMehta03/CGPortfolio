@@ -1,3 +1,164 @@
-body{
-    color: brown;
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+:root{
+  --text: #ffffff;
+  --overlay: rgba(0,0,0,0.38);
+  --card-bg: rgba(255,255,255,0.14);
+  --card-hover: rgba(255,255,255,0.24);
+  --glow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+/* Base */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Fullscreen YouTube background */
+.video-bg { 
+  position: fixed; 
+  inset: 0; 
+  z-index: -3; 
+  overflow: hidden; 
+}
+
+/* Default fallback size (will be overridden by aspect-ratio queries below) */
+.video-bg iframe {
+  position: absolute; 
+  top: 50%; left: 50%;
+  width: 120vw; height: 120vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* clicks pass through to your content */
+  border: 0;
+}
+
+/* Overlay for readability */
+.video-overlay { 
+  position: fixed; 
+  inset: 0; 
+  background: var(--overlay); 
+  z-index: -2; 
+}
+
+/* --- CRUCIAL: true cover without black bars --- */
+/* If the screen is wider than 16:9, fit width; height auto to keep 16:9 */
+@media (min-aspect-ratio: 16/9) {
+  .video-bg iframe { 
+    width: 100vw;
+    height: 56.25vw; /* 9/16 of width */
+  }
+}
+/* If the screen is taller/narrower than 16:9, fit height; width auto to keep 16:9 */
+@media (max-aspect-ratio: 16/9) {
+  .video-bg iframe { 
+    width: 177.78vh; /* 16/9 of height */
+    height: 100vh;
+  }
+}
+
+/* Content container */
+.content {
+  min-height: 100vh; 
+  display: grid; 
+  place-content: center; 
+  text-align: center;
+  padding: 2.25rem 1.25rem 3.5rem; 
+  gap: 1.25rem; 
+  max-width: 1100px; 
+  margin: 0 auto;
+}
+
+/* Animated title */
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  margin: 0 0 1.25rem;
+  line-height: 1.05;
+  text-align: center;
+  font-size: clamp(2.6rem, 5.2vw + 1rem, 5.2rem); /* bigger */
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #fff 0%, #e8f6ff 30%, #d6f6e2 60%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 3px 16px rgba(0,0,0,0.35);
+  opacity: 0; 
+  transform: translateY(12px) scale(0.98);
+  animation: titleIn 900ms cubic-bezier(.22,1,.36,1) 200ms forwards;
+}
+.hero-title:hover { position: relative; }
+
+/* Animated title */
+.hero-subtitle {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin: 0 0 1.25rem;
+  line-height: 1.05;
+  text-align: center;
+  font-size: clamp(1.6rem, 5.2vw + 0.5rem, 1.2rem); /* bigger */
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #fff 0%, #e8f6ff 30%, #d6f6e2 60%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 3px 16px rgba(0,0,0,0.35);
+  opacity: 0; 
+  transform: translateY(12px) scale(0.98);
+  animation: titleIn 900ms cubic-bezier(.22,1,.36,1) 200ms forwards;
+}
+.hero-title:hover { position: relative; }
+
+@keyframes titleIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes sweep { to { transform: translateX(120%); } }
+
+/* Activities side-by-side cards */
+.links {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 1rem;
+  margin-top: .25rem;
+}
+.card {
+  position: relative;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 0.95rem 1.35rem;
+  border-radius: 16px;
+  text-decoration: none; 
+  color: #fff; 
+  font-weight: 700;
+  letter-spacing: .2px;
+  min-width: 160px;
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--glow);
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  outline: 1px solid rgba(255,255,255,0.15);
+}
+.card:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: var(--card-hover);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+}
+.card:active { transform: translateY(-1px) scale(0.99); }
+
+/* Soft gradient accents per card */
+.a1 { background: linear-gradient(135deg, rgba(46,204,113,0.28), rgba(39,174,96,0.22)); }
+.a2 { background: linear-gradient(135deg, rgba(52,152,219,0.28), rgba(41,128,185,0.22)); }
+.a3 { background: linear-gradient(135deg, rgba(241,196,15,0.28), rgba(230,126,34,0.22)); }
+
+.card span { position: relative; z-index: 1; }
+
+/* Motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title, .hero-title:hover::after { animation: none !important; }
+}
+
+/* Small screens */
+@media (max-width: 640px) { .card { min-width: 44%; } }
+@media (max-width: 420px) { 
+  .card { min-width: 100%; } 
 }
