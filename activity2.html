@@ -1,14 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Activity 2</title>
-    <link rel="stylesheet" href="activity2.css">
+  <meta charset="utf-8" />
+  <title>Anahita S | Activity 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="activity2.css" />
 </head>
 <body>
-    <h1>Activity 2</h1>
-    <br>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum alias, reiciendis nam odit dolorem tempore nobis aperiam distinctio repellat ea. Odio accusantium ullam quas quo dolorem sit similique, voluptatum magni sint earum optio rem repellendus quaerat? Molestiae nemo cupiditate hic ipsa fuga doloribus, modi nisi. Incidunt, omnis ab. Eligendi iste fugit eaque ex. Sunt veniam, doloribus quibusdam ullam omnis recusandae reiciendis. Repellat totam esse reprehenderit eum perspiciatis rem, repudiandae porro inventore minus possimus quam architecto excepturi assumenda corrupti quas hic facilis impedit culpa ipsum ex sunt. Quaerat voluptatibus autem ipsum sit laboriosam. Earum ad corporis ab veniam sunt odit obcaecati atque a repellat! Ut quo eos ipsam delectus mollitia aperiam! Dolores reprehenderit et officiis at iste, rem explicabo, doloremque facere maiores necessitatibus nisi? Optio maiores inventore ullam sunt culpa nisi, ipsum a reprehenderit? Minima optio, autem eligendi facilis aliquid ipsa consectetur harum dolores repudiandae culpa veniam illum obcaecati laudantium officiis! Voluptates sapiente accusantium voluptatum iusto possimus esse ducimus. Aut porro veritatis odit itaque nulla, neque aliquid mollitia at ipsam! Beatae impedit similique tenetur minima. Tempore dolores quos voluptatum dolor voluptas qui fuga dolore sequi rerum perferendis corporis voluptatibus exercitationem, in animi iste eum repellendus laboriosam quam, excepturi sed ratione vel.</p>
+  <header class="site-header">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="./index.html">Home</a>
+      <span aria-hidden="true">></span>
+      <span>Activity 2</span>
+    </nav>
+    <h1 class="title">Hybrid Solar PV + Wind System for a Rural Health Clinic</h1>
+    <p class="subtitle">Anahita Shrestha | Clean and Green Energy Portfolio</p>
+  </header>
+
+  <main class="container">
+    <!-- HERO SUMMARY -->
+    <section class="card hero">
+      <h2>Summary</h2>
+      <p>
+        This architecture blends <strong>daytime solar PV</strong> with <strong>evening/monsoon wind</strong> on a
+        <strong>common DC bus</strong> to stabilize supply without oversizing either source. A
+        <strong>LiFePO4 battery</strong> anchors autonomy; a <strong>hybrid inverter/charger</strong> provides clean AC,
+        islanding, and black-start; and an <strong>ATS</strong> accepts grid/diesel only at low state-of-charge.
+        <strong>Critical vs non-critical</strong> load split and <strong>EMS scheduling</strong> protect the vaccine cold-chain
+        and minimize diesel burn.
+      </p>
+    </section>
+
+    <!-- BLOCK DIAGRAM (IMAGE) -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Block Diagram</h2>
+        <span class="chip chip-diagram" title="Process Flow">Process</span>
+      </div>
+
+      <figure class="diagram-figure">
+        <img
+          src="assets/backgroundimg2.jpg"
+          alt="Hybrid solar–wind system: PV via MPPT and wind via rectifier feed a DC bus charging LiFePO4; hybrid inverter supplies AC; ATS-coupled grid/diesel; AC board split into critical and non-critical; EMS monitoring and protections."
+          class="diagram-img" loading="lazy" decoding="async"
+        />
+      </figure>
+    </section>
+
+    <!-- WHY THIS ARCHITECTURE (PARAGRAPH WITH HIGHLIGHTS) -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Why this architecture?</h2>
+        <span class="chip chip-why">Rationale</span>
+      </div>
+      <p class="why">
+        **Complementary resources**—<strong>PV for daytime</strong> and <strong>wind for evenings/monsoon</strong>—land on a
+        <strong>common DC bus</strong> (PV via <strong>MPPT</strong>, wind via <strong>rectifier + dump load</strong>) for a
+        smoother profile <strong>without oversizing</strong>. A <strong>LiFePO4 battery</strong> delivers clean night power; the
+        <strong>hybrid inverter</strong> supplies stable AC, islanding, and black-start; an <strong>ATS</strong> brings grid/diesel
+        only below SoC floors. Splitting loads into <strong>critical vs non-critical</strong> lets the EMS
+        <strong>guarantee cold-chain</strong>, <strong>time-shift heavy loads</strong> to solar noon, and <strong>shed gracefully</strong>
+        during low resource windows—yielding <strong>high uptime</strong>, <strong>low diesel burn</strong>, and <strong>modular growth</strong>.
+      </p>
+    </section>
+
+    <!-- 150–200 WORD EXPLAINER (POINTS) -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Explainer</h2>
+        <span class="chip chip-explainer">Explainer</span>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3 class="h3">Source of energy</h3>
+          <ul class="bullets">
+            <li><strong>Solar irradiance (daytime)</strong> + site <strong>wind regime</strong> (often evenings/monsoon).</li>
+            <li>Their <strong>diurnal/seasonal complementarity</strong> flattens supply variability.</li>
+          </ul>
+
+          <h3 class="h3">Conversion process</h3>
+          <ul class="bullets">
+            <li>PV strings → <strong>MPPT</strong> → DC bus; wind AC → <strong>rectifier/controller</strong> → DC bus.</li>
+            <li>DC bus charges <strong>LiFePO4 battery</strong> (BMS-protected).</li>
+            <li><strong>Hybrid inverter/charger</strong> provides regulated AC; <strong>ATS</strong> enables grid/diesel fallback.</li>
+            <li><strong>EMS</strong> enforces SoC thresholds, schedules non-critical loads, and issues alerts.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="h3">Output / utilization</h3>
+          <ul class="bullets">
+            <li>24×7 AC for <strong>critical loads</strong> (vaccine fridge, lights, comms, lab).</li>
+            <li><strong>Non-critical</strong> circuits are time-shifted or shed to preserve autonomy.</li>
+            <li>Battery bridges nights/outages; wind boosts nights/monsoon performance.</li>
+          </ul>
+
+          <h3 class="h3">Real-world relevance</h3>
+          <ul class="bullets">
+            <li>Improves <strong>reliability</strong> and protects <strong>cold-chain</strong> on weak grids.</li>
+            <li>Reduces <strong>diesel OPEX/CO₂</strong>; <strong>scalable CAPEX</strong> (add PV/turbine/battery later).</li>
+            <li>Standard protections: <strong>SPDs</strong>, <strong>RCD/MCB selectivity</strong>, <strong>earthing</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL: QUICK SPECS -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Quick Specs</h2>
+        <span class="chip chip-specs">Specs</span>
+      </div>
+      <ul class="specs">
+        <li><strong>Backbone:</strong> Common DC bus; PV MPPT + wind rectifier</li>
+        <li><strong>Storage:</strong> LiFePO4 (SoC-managed), hybrid inverter/charger</li>
+        <li><strong>Loads:</strong> Split ACDB (critical / non-critical)</li>
+        <li><strong>Fallback:</strong> ATS to grid/diesel; EMS scheduling & alarms</li>
+      </ul>
+    </section>
+
+    <!-- LEGEND -->
+    <aside class="legend card" aria-label="Legend">
+      <h2>Legend</h2>
+      <ul class="legend-list">
+        <li><span class="dot dot-power"></span> Power / Energy Path</li>
+        <li><span class="dot dot-heat"></span> Heat / Thermal Use</li>
+        <li><span class="dot dot-control"></span> Control / Monitoring</li>
+        <li><span class="dot dot-safety"></span> Safety / Protection</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="next-steps">
+      <a class="btn ghost" href="./activity1.html" title="Biogas (Dairy Farm)">Activity 1</a>
+      <a class="btn ghost" href="./activity3.html" title="Geothermal (Hot-Water Wells)">Activity 3</a>
+    </nav>
+    <p class="copyright">Anahita Shrestha: Clean and Green Energy Portfolio © 2025</p>
+  </footer>
 </body>
 </html>
