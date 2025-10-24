@@ -1,14 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Activity 1</title>
-    <link rel="stylesheet" href="activity1.css">
+    <meta charset="utf-8" />
+    <title>Anahita S | Activity 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="activity1.css" />
 </head>
+
 <body>
-    <h1>Activity 1</h1>
-    <br>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem ipsa ratione accusantium sunt debitis ipsum ullam est, nesciunt ipsam dicta perferendis corporis voluptatem accusamus? Iste assumenda fuga atque molestias eveniet modi velit iusto esse ad, facere minima maxime veniam quasi odio non repudiandae officia debitis quia nam ex itaque autem. Totam ab dolores odit ducimus modi nisi voluptatum corrupti, placeat vitae voluptate aspernatur repudiandae laboriosam suscipit ipsam eos nulla distinctio adipisci enim quisquam. Laborum itaque, corporis vel, commodi tempore rerum nobis laboriosam atque dignissimos tempora inventore at, obcaecati eius officiis impedit. Architecto, tempore exercitationem. At possimus enim eveniet beatae fugiat.</p>
+    <header class="site-header">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="./index.html">Home</a>
+            <span aria-hidden="true">></span>
+            <span>Activity 1</span>
+        </nav>
+        <h1 class="title">Biogas System for a 100-Cattle Dairy Farm</h1>
+        <p class="subtitle">Anahita Shrestha | Clean and Green Energy Portfolio</p>
+    </header>
+
+    <main class="container">
+        <!-- HERO SUMMARY -->
+        <section class="card hero">
+            <h2>Summary</h2>
+            <p>
+                This design converts dairy manure into clean energy using
+                <strong>mesophilic anaerobic digestion (~35 °C, 30-40 days HRT)</strong>,
+                delivering <strong>biogas</strong> for electricity/heat and
+                <strong>digestate</strong> for soil health. The architecture prioritizes
+                <strong>gas quality</strong>, <strong>safe operation</strong>, and
+                <strong>modular utilization paths</strong> (CHP, direct heat, Bio-CNG).
+            </p>
+        </section>
+
+        <!-- BLOCK DIAGRAM (IMAGE) -->
+        <section class="card">
+            <div class="section-header">
+                <h2>Block Diagram</h2>
+                <span class="chip chip-diagram" title="Process Flow">Process</span>
+            </div>
+
+            <figure class="diagram-figure">
+                <img src="assets/backgroundimg2.jpg"
+                    alt="Biogas system block diagram: manure collection → screening → slurry preparation → feed pump → anaerobic digester; gas line through holder, moisture trap, H₂S scrubber, meter to CHP/direct heat/Bio-CNG; digestate to solid–liquid separator yielding compost and liquid fertilizer; safety and monitoring shown."
+                    class="diagram-img" loading="lazy" decoding="async" />
+            </figure>
+
+
+        </section>
+
+
+        <!-- WHY THIS ARCHITECTURE (PARAGRAPH WITH HIGHLIGHTS) -->
+        <section class="card">
+            <div class="section-header">
+                <h2>Why this architecture?</h2>
+                <span class="chip chip-why">Rationale</span>
+            </div>
+            <p class="why">
+                Cattle dung is <strong>wet and consistent</strong>, making it ideal for
+                <strong>mesophilic anaerobic digestion (~35 °C, 30-40 d HRT)</strong> with steady CH₄ yield and simple
+                O&M.
+                The <strong>gas train</strong>-<strong>moisture trap</strong> + <strong>H₂S scrubber</strong>protects
+                burners/CHP from corrosion and deposits,
+                while a <strong>low-pressure gas holder</strong> buffers slow biological production against peaky farm
+                demand.
+                The layout intentionally exposes <strong>three utilization paths</strong>—<strong>CHP (power + hot
+                    water)</strong>,
+                <strong>direct heat</strong>, and <strong>Bio-CNG upgrading</strong>so energy can be matched to evolving
+                loads without redesign.
+                Downstream, <strong>solid-liquid separation</strong> closes the nutrient loop with compost and liquid
+                bio-fertilizer,
+                reducing synthetic NPK. Finally, embedded <strong>safety interlocks</strong>
+                (PRV, flame arrestor, leak detection, earthing) keep operations compliant and robust.
+            </p>
+        </section>
+
+        <!-- 150–200 WORD EXPLAINER (POINTS) -->
+        <section class="card">
+            <div class="section-header">
+                <h2>Explainer (150-200 words)</h2>
+                <span class="chip chip-explainer">Explainer</span>
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h3 class="h3">Source of energy</h3>
+                    <ul class="bullets">
+                        <li>100 cattle → <strong>~1,000-1,500 kg/day</strong> manure with high biodegradable organics.
+                        </li>
+                        <li>Moisture content and stability suit <strong>wet anaerobic digestion</strong>.</li>
+                    </ul>
+
+                    <h3 class="h3">Conversion process</h3>
+                    <ul class="bullets">
+                        <li>Manure diluted (~1:1) and fed into a <strong>mesophilic digester (~35 °C)</strong>.</li>
+                        <li>Microbial stages convert organics → <strong>biogas (≈55-65% CH₄)</strong>.</li>
+                        <li>Gas conditioning: <strong>moisture trap</strong> → <strong>H₂S scrubber</strong> →
+                            <strong>meter</strong>.</li>
+                        <li>Digestate → <strong>solid-liquid separator</strong> for compost and liquid bio-fertilizer.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="h3">Output / utilization</h3>
+                    <ul class="bullets">
+                        <li>Typical yield: <strong>~30-52 m³ biogas/day</strong> (site dependent).</li>
+                        <li><strong>CHP genset</strong>: ~30% electrical + useful heat for cleaning/CIP.</li>
+                        <li><strong>Direct burners</strong>: cooking, process heat (e.g., milk-chiller burner).</li>
+                        <li><strong>Upgrading</strong>: Bio-CNG for vehicles or cylinder storage.</li>
+                        <li><strong>Digestate</strong>: replaces synthetic NPK; improves soil structure/CEC.</li>
+                    </ul>
+
+                    <h3 class="h3">Real-world relevance</h3>
+                    <ul class="bullets">
+                        <li>Reduces <strong>LPG/diesel OPEX</strong>, odors, and pathogens; lowers <strong>methane
+                                emissions</strong>.</li>
+                        <li>Creates revenue/savings via <strong>power/heat/fertilizer</strong>.</li>
+                        <li>Simple, <strong>scalable</strong> equipment with <strong>PRV, flame arrestor, leak
+                                detection</strong> for safety.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPTIONAL: QUICK SPECS -->
+        <section class="card">
+            <div class="section-header">
+                <h2>Quick Specs</h2>
+                <span class="chip chip-specs">Specs</span>
+            </div>
+            <ul class="specs">
+                <li><strong>Process:</strong> Mesophilic AD (~35 °C), HRT 30-40 days</li>
+                <li><strong>Gas quality:</strong> 55-65% CH₄ after moisture/H₂S removal</li>
+                <li><strong>Safety:</strong> PRV, flame arrestor, LEL detector, earthing</li>
+                <li><strong>Outputs:</strong> Electricity/heat (CHP), direct heat, Bio-CNG; compost + liquid fertilizer
+                </li>
+            </ul>
+        </section>
+
+        <!-- LEGEND -->
+        <aside class="legend card" aria-label="Legend">
+            <h2>Legend</h2>
+            <ul class="legend-list">
+                <li><span class="dot dot-power"></span> Power / Energy Path</li>
+                <li><span class="dot dot-heat"></span> Heat / Thermal Use</li>
+                <li><span class="dot dot-control"></span> Control / Monitoring</li>
+                <li><span class="dot dot-safety"></span> Safety / Protection</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="next-steps">
+            <a class="btn ghost" href="./activity2.html" title="Solar + Wind (Clinic)">Activity 2</a>
+            <a class="btn ghost" href="./activity3.html" title="Geothermal (Hot-Water Wells)">Activity 3</a>
+        </nav>
+        <p class="copyright">Anahita Shrestha: Clean and Green Energy Portfolio © 2025 </p>
+    </footer>
 </body>
+
 </html>
