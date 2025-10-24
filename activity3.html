@@ -1,14 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Activity 3</title>
-    <link rel="stylesheet" href="activity3.css">
+  <meta charset="utf-8" />
+  <title>Anahita S | Activity 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="activity3.css" />
 </head>
 <body>
-    <h1>Activity 3</h1>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, accusantium earum? Earum eveniet placeat officiis molestias quam hic laudantium saepe veniam rem obcaecati, doloremque, sit illo magnam. Cumque, amet ipsum.</p>
+  <header class="site-header">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="./index.html">Home</a>
+      <span aria-hidden="true">></span>
+      <span>Activity 3</span>
+    </nav>
+    <h1 class="title">Geothermal Power Plant — Hot-Water Wells</h1>
+    <p class="subtitle">Anahita Shrestha | Clean and Green Energy Portfolio</p>
+  </header>
+
+  <main class="container">
+    <!-- HERO SUMMARY -->
+    <section class="card hero">
+      <h2>Summary</h2>
+      <p>
+        The plant matches <strong>cycle to resource</strong>: use <strong>flash steam</strong> for hotter brine
+        (T &gt; ~180 °C) and <strong>binary/ORC</strong> for moderate brine (~120–180 °C) to maximize net MW.
+        <strong>Closed-loop reinjection</strong> sustains reservoir pressure and chemistry, while
+        <strong>H₂S/silica control</strong> and fit-for-climate <strong>ACC/cooling tower</strong> protect assets.
+        Grid interface uses standard <strong>step-up + switchyard</strong> with <strong>EMS/protective relays</strong>.
+      </p>
+    </section>
+
+    <!-- BLOCK DIAGRAM (IMAGE) -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Block Diagram</h2>
+        <span class="chip chip-diagram" title="Process Flow">Process</span>
+      </div>
+
+      <figure class="diagram-figure">
+        <img
+          src="assets/backgroundimg2.jpg"
+          alt="Geothermal hot-water wells: brine to flash separator and steam turbine for hot fields; or to ORC heat-exchanger and ORC turbine for moderate fields; condensers and reinjection; grid export via transformer and switchyard with EMS/protection."
+          class="diagram-img" loading="lazy" decoding="async"
+        />
+      </figure>
+    </section>
+
+    <!-- WHY THIS ARCHITECTURE (PARAGRAPH WITH HIGHLIGHTS) -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Why this architecture?</h2>
+        <span class="chip chip-why">Rationale</span>
+      </div>
+      <p class="why">
+        The plant <strong>selects the conversion path to fit the reservoir</strong>: <strong>flash steam</strong> if the
+        brine is hot enough to separate usable steam, or <strong>binary/ORC</strong> if moderate, using a low-boiling
+        working fluid to extract heat efficiently. <strong>Closed reinjection</strong> maintains pressure and limits
+        surface discharge, extending field life. <strong>H₂S/silica control</strong>, scaling inhibitors, and
+        climate-appropriate <strong>ACC/cooling tower</strong> maintain efficiency and protect metallurgy. With a
+        <strong>step-up transformer + switchyard</strong> and <strong>EMS/relays</strong>, the plant is grid-ready,
+        fault-tolerant, and provides <strong>24×7 low-carbon baseload</strong> with a small footprint.
+      </p>
+    </section>
+
+    <!-- 150–200 WORD EXPLAINER (POINTS) -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Explainer</h2>
+        <span class="chip chip-explainer">Explainer</span>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3 class="h3">Source of energy</h3>
+          <ul class="bullets">
+            <li><strong>Liquid-dominated geothermal reservoir</strong> delivers hot brine via production wells.</li>
+            <li>Reservoir temperature/chemistry determine the best conversion path.</li>
+          </ul>
+
+          <h3 class="h3">Conversion process</h3>
+          <ul class="bullets">
+            <li><strong>Flash path (hotter fields):</strong> Brine → flash separator → steam turbine → generator.</li>
+            <li><strong>Binary/ORC path (moderate fields):</strong> Brine → heat exchanger → low-boiling working fluid →
+                ORC turbine → generator.</li>
+            <li><strong>Condenser</strong> (ACC/cooling tower) rejects heat; cooled brine → <strong>re-injection wells</strong>.</li>
+            <li><strong>Chemistry control:</strong> H₂S abatement, silica/scale inhibitors to protect equipment.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="h3">Output / utilization</h3>
+          <ul class="bullets">
+            <li>Continuous baseload <strong>electricity</strong> with high capacity factor.</li>
+            <li>Optional co-located <strong>low-grade heat</strong> for drying/space heat where viable.</li>
+          </ul>
+
+          <h3 class="h3">Real-world relevance</h3>
+          <ul class="bullets">
+            <li><strong>24×7 low-carbon</strong> power; modest land/water use when air-cooled.</li>
+            <li><strong>Reinjection</strong> sustains reservoir integrity and regulatory compliance.</li>
+            <li>Choosing <strong>flash vs ORC</strong> by measured temperature/chemistry minimizes LCOE and maximizes uptime.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL: QUICK SPECS -->
+    <section class="card">
+      <div class="section-header">
+        <h2>Quick Specs</h2>
+        <span class="chip chip-specs">Specs</span>
+      </div>
+      <ul class="specs">
+        <li><strong>Cycle:</strong> Flash (>~180 °C) or Binary/ORC (~120–180 °C)</li>
+        <li><strong>Heat rejection:</strong> ACC or cooling tower (climate-based)</li>
+        <li><strong>Reservoir:</strong> Closed-loop reinjection, chemistry management</li>
+        <li><strong>Grid:</strong> Step-up transformer, switchyard, EMS/relays</li>
+      </ul>
+    </section>
+
+    <!-- LEGEND -->
+    <aside class="legend card" aria-label="Legend">
+      <h2>Legend</h2>
+      <ul class="legend-list">
+        <li><span class="dot dot-power"></span> Power / Energy Path</li>
+        <li><span class="dot dot-heat"></span> Heat / Thermal Use</li>
+        <li><span class="dot dot-control"></span> Control / Monitoring</li>
+        <li><span class="dot dot-safety"></span> Safety / Protection</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="next-steps">
+      <a class="btn ghost" href="./activity1.html" title="Biogas (Dairy Farm)">Activity 1</a>
+      <a class="btn ghost" href="./activity2.html" title="Solar + Wind (Clinic)">Activity 2</a>
+    </nav>
+    <p class="copyright">Anahita Shrestha: Clean and Green Energy Portfolio © 2025</p>
+  </footer>
 </body>
 </html>
